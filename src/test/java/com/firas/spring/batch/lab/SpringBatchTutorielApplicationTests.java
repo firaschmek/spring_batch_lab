@@ -1,4 +1,4 @@
-package com.example.spring_batch_tutoriel;
+package com.firas.spring.batch.lab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

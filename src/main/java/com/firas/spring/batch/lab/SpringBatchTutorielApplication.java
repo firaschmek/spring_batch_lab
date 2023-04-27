@@ -1,4 +1,4 @@
-package com.example.spring_batch_tutoriel;
+package com.firas.spring.batch.lab;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;

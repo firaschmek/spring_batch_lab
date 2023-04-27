@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring_batch_tutoriel</artifactId>
+    <artifactId>spring_batch_lab</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring_batch_tutoriel</name>
     <description>spring_batch_tutoriel</description>
