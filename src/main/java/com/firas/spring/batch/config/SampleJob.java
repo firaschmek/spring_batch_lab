@@ -52,17 +52,7 @@ public class SampleJob {
     Step secondStep(JobRepository jobRepository ,Tasklet secondTasklet) {
         return new StepBuilder("second_step",jobRepository).tasklet(secondTasklet).transactionManager(transactionManager).build();
     }
-    @Bean
-    Tasklet secondTasklet() {
-        return new Tasklet() {
 
-            @Override
-            public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
-                System.out.println("secondTask");
-                return RepeatStatus.FINISHED;
-            }
-        };
-    }
 
 
 
