@@ -4,6 +4,7 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.job.builder.JobBuilder;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -27,6 +28,7 @@ public class SampleJob {
     @Bean
     public Job firstJob(JobRepository jobRepository, Step firstStep,Step secondStep) {
         return new JobBuilder("first_job", jobRepository)
+                .incrementer(new RunIdIncrementer())
                 .start(firstStep)
                 .next(secondStep)
                 .build();
