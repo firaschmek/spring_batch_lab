@@ -1,5 +1,7 @@
 package com.firas.spring.batch.config;
 
+import com.firas.spring.batch.listener.FirstJobListener;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
@@ -26,11 +28,12 @@ public class SampleJob {
     private PlatformTransactionManager transactionManager;
 
     @Bean
-    public Job firstJob(JobRepository jobRepository, Step firstStep,Step secondStep) {
+    public Job firstJob(JobRepository jobRepository, Step firstStep,Step secondStep, FirstJobListener firstJobListener) {
         return new JobBuilder("first_job", jobRepository)
                 .incrementer(new RunIdIncrementer())
                 .start(firstStep)
                 .next(secondStep)
+                .listener(firstJobListener)
                 .build();
     }
     @Bean

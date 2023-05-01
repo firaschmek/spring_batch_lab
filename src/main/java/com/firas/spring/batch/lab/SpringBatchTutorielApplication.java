@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 //@EnableBatchProcessing
-@ComponentScan({"com.firas.spring.batch.config","com.firas.spring.batch.service"})
+@ComponentScan({"com.firas.spring.batch.config","com.firas.spring.batch.service","com.firas.spring.batch.listener"})
 public class SpringBatchTutorielApplication {
 
     public static void main(String[] args) {
