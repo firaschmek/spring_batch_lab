@@ -9,8 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@EnableBatchProcessing
 @ComponentScan({"com.firas.spring.batch.config","com.firas.spring.batch.service"
-        ,"com.firas.spring.batch.listener","com.firas.spring.batch.reader","com.firas.spring.batch.processor","com.firas.spring.batch.writer"})
+        ,"com.firas.spring.batch.listener","com.firas.spring.batch.reader","com.firas.spring.batch.processor","com.firas.spring.batch.writer",
+                "com.firas.spring.batch.controller"})
 public class SpringBatchTutorielApplication {
 
     public static void main(String[] args) {
